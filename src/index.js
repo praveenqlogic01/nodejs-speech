@@ -45,10 +45,10 @@
 const helpers = require('./helpers');
 
 // Import the clients for each version supported by this package.
-const gapic = Object.freeze({
+const gapic = {
   v1: require('./v1'),
   v1p1beta1: require('./v1p1beta1'),
-});
+};
 
 // Augment the SpeechClient objects with the helpers.
 for (const gapicVersion of Object.keys(gapic)) {
